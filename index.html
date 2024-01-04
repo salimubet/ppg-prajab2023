@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)https://ppg-prajab.simpkb.id/home -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="origin-trial" content="Az520Inasey3TAyqLyojQa8MnmCALSEU29yQFW8dePZ7xQTvSt73pHazLFTK5f7SyLUJSo2uKLesEtEa9aUYcgMAAACPeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZS5jb206NDQzIiwiZmVhdHVyZSI6IkRpc2FibGVUaGlyZFBhcnR5U3RvcmFnZVBhcnRpdGlvbmluZyIsImV4cGlyeSI6MTcyNTQwNzk5OSwiaXNTdWJkb21haW4iOnRydWUsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0="><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Program yang berupaya untuk mewujudkan visi Pendidikan Indonesia dalam mewujudkan Indonesia maju yang berdaulat, mandiri, dan berkepribadian melalui terciptanya Pelajar Pancasila."><link rel="icon" href="https://ppg-prajab.simpkb.id/favicon.png"><title>SIM PKB PPG Prajabatan</title><link rel="stylesheet" href="./index_files/css"><link rel="stylesheet" href="./index_files/materialdesignicons.min.css"><script type="text/javascript" async="" src="./index_files/analytics.js.download"></script><script type="text/javascript" async="" src="./index_files/js"></script><script type="text/javascript" async="" src="./index_files/js(1)"></script><script type="text/javascript" async="" src="./index_files/recaptcha__id.js.download" crossorigin="anonymous" integrity="sha384-bc1TX164kgd/qR4fbo6QnzBtzk6ReZqkdJtxSgC/39r4RNquEiW77yf923DM1DpV"></script><script defer="defer" src="./index_files/chunk-vendors.45c83737.js.download"></script><script defer="defer" src="./index_files/app.b5585996.js.download"></script><link href="./index_files/chunk-vendors.bebd387f.css" rel="stylesheet"><link href="./index_files/app.8f9a4a7a.css" rel="stylesheet"><style>/*!
+ * Cropper.js v1.5.7
+ * https://fengyuanchen.github.io/cropperjs
+ *
+ * Copyright 2015-present Chen Fengyuan
+ * Released under the MIT license
+ *
+ * Date: 2020-05-23T05:22:57.283Z
+ */
+
+.cropper-container {
+  direction: ltr;
+  font-size: 0;
+  line-height: 0;
+  position: relative;
+  -ms-touch-action: none;
+  touch-action: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.cropper-container img {
+  display: block;
+  height: 100%;
+  image-orientation: 0deg;
+  max-height: none !important;
+  max-width: none !important;
+  min-height: 0 !important;
+  min-width: 0 !important;
+  width: 100%;
+}
+
+.cropper-wrap-box,
+.cropper-canvas,
+.cropper-drag-box,
+.cropper-crop-box,
+.cropper-modal {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.cropper-wrap-box,
+.cropper-canvas {
+  overflow: hidden;
+}
+
+.cropper-drag-box {
+  background-color: #fff;
+  opacity: 0;
+}
+
+.cropper-modal {
+  background-color: #000;
+  opacity: 0.5;
+}
+
+.cropper-view-box {
+  display: block;
+  height: 100%;
+  outline: 1px solid #39f;
+  outline-color: rgba(51, 153, 255, 0.75);
+  overflow: hidden;
+  width: 100%;
+}
+
+.cropper-dashed {
+  border: 0 dashed #eee;
+  display: block;
+  opacity: 0.5;
+  position: absolute;
+}
+
+.cropper-dashed.dashed-h {
+  border-bottom-width: 1px;
+  border-top-width: 1px;
+  height: calc(100% / 3);
+  left: 0;
+  top: calc(100% / 3);
+  width: 100%;
+}
+
+.cropper-dashed.dashed-v {
+  border-left-width: 1px;
+  border-right-width: 1px;
+  height: 100%;
+  left: calc(100% / 3);
+  top: 0;
+  width: calc(100% / 3);
+}
+
+.cropper-center {
+  display: block;
+  height: 0;
+  left: 50%;
+  opacity: 0.75;
+  position: absolute;
+  top: 50%;
+  width: 0;
+}
+
+.cropper-center::before,
+.cropper-center::after {
+  background-color: #eee;
+  content: ' ';
+  display: block;
+  position: absolute;
+}
+
+.cropper-center::before {
+  height: 1px;
+  left: -3px;
+  top: 0;
+  width: 7px;
+}
+
+.cropper-center::after {
+  height: 7px;
+  left: 0;
+  top: -3px;
+  width: 1px;
+}
+
+.cropper-face,
+.cropper-line,
+.cropper-point {
+  display: block;
+  height: 100%;
+  opacity: 0.1;
+  position: absolute;
+  width: 100%;
+}
+
+.cropper-face {
+  background-color: #fff;
+  left: 0;
+  top: 0;
+}
+
+.cropper-line {
+  background-color: #39f;
+}
+
+.cropper-line.line-e {
+  cursor: ew-resize;
+  right: -3px;
+  top: 0;
+  width: 5px;
+}
+
+.cropper-line.line-n {
+  cursor: ns-resize;
+  height: 5px;
+  left: 0;
+  top: -3px;
+}
+
+.cropper-line.line-w {
+  cursor: ew-resize;
+  left: -3px;
+  top: 0;
+  width: 5px;
+}
+
+.cropper-line.line-s {
+  bottom: -3px;
+  cursor: ns-resize;
+  height: 5px;
+  left: 0;
+}
+
+.cropper-point {
+  background-color: #39f;
+  height: 5px;
+  opacity: 0.75;
+  width: 5px;
+}
+
+.cropper-point.point-e {
+  cursor: ew-resize;
+  margin-top: -3px;
+  right: -3px;
+  top: 50%;
+}
+
+.cropper-point.point-n {
+  cursor: ns-resize;
+  left: 50%;
+  margin-left: -3px;
+  top: -3px;
+}
+
+.cropper-point.point-w {
+  cursor: ew-resize;
+  left: -3px;
+  margin-top: -3px;
+  top: 50%;
+}
+
+.cropper-point.point-s {
+  bottom: -3px;
+  cursor: s-resize;
+  left: 50%;
+  margin-left: -3px;
+}
+
+.cropper-point.point-ne {
+  cursor: nesw-resize;
+  right: -3px;
+  top: -3px;
+}
+
+.cropper-point.point-nw {
+  cursor: nwse-resize;
+  left: -3px;
+  top: -3px;
+}
+
+.cropper-point.point-sw {
+  bottom: -3px;
+  cursor: nesw-resize;
+  left: -3px;
+}
+
+.cropper-point.point-se {
+  bottom: -3px;
+  cursor: nwse-resize;
+  height: 20px;
+  opacity: 1;
+  right: -3px;
+  width: 20px;
+}
+
+@media (min-width: 768px) {
+  .cropper-point.point-se {
+    height: 15px;
+    width: 15px;
+  }
+}
+
+@media (min-width: 992px) {
+  .cropper-point.point-se {
+    height: 10px;
+    width: 10px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .cropper-point.point-se {
+    height: 5px;
+    opacity: 0.75;
+    width: 5px;
+  }
+}
+
+.cropper-point.point-se::before {
+  background-color: #39f;
+  bottom: -50%;
+  content: ' ';
+  display: block;
+  height: 200%;
+  opacity: 0;
+  position: absolute;
+  right: -50%;
+  width: 200%;
+}
+
+.cropper-invisible {
+  opacity: 0;
+}
+
+.cropper-bg {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAAA3NCSVQICAjb4U/gAAAABlBMVEXMzMz////TjRV2AAAACXBIWXMAAArrAAAK6wGCiw1aAAAAHHRFWHRTb2Z0d2FyZQBBZG9iZSBGaXJld29ya3MgQ1M26LyyjAAAABFJREFUCJlj+M/AgBVhF/0PAH6/D/HkDxOGAAAAAElFTkSuQmCC');
+}
+
+.cropper-hide {
+  display: block;
+  height: 0;
+  position: absolute;
+  width: 0;
+}
+
+.cropper-hidden {
+  display: none !important;
+}
+
+.cropper-move {
+  cursor: move;
+}
+
+.cropper-crop {
+  cursor: crosshair;
+}
+
+.cropper-disabled .cropper-drag-box,
+.cropper-disabled .cropper-face,
+.cropper-disabled .cropper-line,
+.cropper-disabled .cropper-point {
+  cursor: not-allowed;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9ub2RlX21vZHVsZXMvY3JvcHBlcmpzL2Rpc3QvY3JvcHBlci5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7O0VBUUU7O0FBRUY7RUFDRSxjQUFjO0VBQ2QsWUFBWTtFQUNaLGNBQWM7RUFDZCxrQkFBa0I7RUFDbEIsc0JBQXNCO0VBQ3RCLGtCQUFrQjtFQUNsQix5QkFBeUI7RUFDekIsc0JBQXNCO0VBQ3RCLHFCQUFxQjtFQUNyQixpQkFBaUI7QUFDbkI7O0FBRUE7RUFDRSxjQUFjO0VBQ2QsWUFBWTtFQUNaLHVCQUF1QjtFQUN2QiwyQkFBMkI7RUFDM0IsMEJBQTBCO0VBQzFCLHdCQUF3QjtFQUN4Qix1QkFBdUI7RUFDdkIsV0FBVztBQUNiOztBQUVBOzs7OztFQUtFLFNBQVM7RUFDVCxPQUFPO0VBQ1Asa0JBQWtCO0VBQ2xCLFFBQVE7RUFDUixNQUFNO0FBQ1I7O0FBRUE7O0VBRUUsZ0JBQWdCO0FBQ2xCOztBQUVBO0VBQ0Usc0JBQXNCO0VBQ3RCLFVBQVU7QUFDWjs7QUFFQTtFQUNFLHNCQUFzQjtFQUN0QixZQUFZO0FBQ2Q7O0FBRUE7RUFDRSxjQUFjO0VBQ2QsWUFBWTtFQUNaLHVCQUF1QjtFQUN2Qix1Q0FBdUM7RUFDdkMsZ0JBQWdCO0VBQ2hCLFdBQVc7QUFDYjs7QUFFQTtFQUNFLHFCQUFxQjtFQUNyQixjQUFjO0VBQ2QsWUFBWTtFQUNaLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLHdCQUF3QjtFQUN4QixxQkFBcUI7RUFDckIsc0JBQXNCO0VBQ3RCLE9BQU87RUFDUCxtQkFBbUI7RUFDbkIsV0FBVztBQUNiOztBQUVBO0VBQ0Usc0JBQXNCO0VBQ3RCLHVCQUF1QjtFQUN2QixZQUFZO0VBQ1osb0JBQW9CO0VBQ3BCLE1BQU07RUFDTixxQkFBcUI7QUFDdkI7O0FBRUE7RUFDRSxjQUFjO0VBQ2QsU0FBUztFQUNULFNBQVM7RUFDVCxhQUFhO0VBQ2Isa0JBQWtCO0VBQ2xCLFFBQVE7RUFDUixRQUFRO0FBQ1Y7O0FBRUE7O0VBRUUsc0JBQXNCO0VBQ3RCLFlBQVk7RUFDWixjQUFjO0VBQ2Qsa0JBQWtCO0FBQ3BCOztBQUVBO0VBQ0UsV0FBVztFQUNYLFVBQVU7RUFDVixNQUFNO0VBQ04sVUFBVTtBQUNaOztBQUVBO0VBQ0UsV0FBVztFQUNYLE9BQU87RUFDUCxTQUFTO0VBQ1QsVUFBVTtBQUNaOztBQUVBOzs7RUFHRSxjQUFjO0VBQ2QsWUFBWTtFQUNaLFlBQVk7RUFDWixrQkFBa0I7RUFDbEIsV0FBVztBQUNiOztBQUVBO0VBQ0Usc0JBQXNCO0VBQ3RCLE9BQU87RUFDUCxNQUFNO0FBQ1I7O0FBRUE7RUFDRSxzQkFBc0I7QUFDeEI7O0FBRUE7RUFDRSxpQkFBaUI7RUFDakIsV0FBVztFQUNYLE1BQU07RUFDTixVQUFVO0FBQ1o7O0FBRUE7RUFDRSxpQkFBaUI7RUFDakIsV0FBVztFQUNYLE9BQU87RUFDUCxTQUFTO0FBQ1g7O0FBRUE7RUFDRSxpQkFBaUI7RUFDakIsVUFBVTtFQUNWLE1BQU07RUFDTixVQUFVO0FBQ1o7O0FBRUE7RUFDRSxZQUFZO0VBQ1osaUJBQWlCO0VBQ2pCLFdBQVc7RUFDWCxPQUFPO0FBQ1Q7O0FBRUE7RUFDRSxzQkFBc0I7RUFDdEIsV0FBVztFQUNYLGFBQWE7RUFDYixVQUFVO0FBQ1o7O0FBRUE7RUFDRSxpQkFBaUI7RUFDakIsZ0JBQWdCO0VBQ2hCLFdBQVc7RUFDWCxRQUFRO0FBQ1Y7O0FBRUE7RUFDRSxpQkFBaUI7RUFDakIsU0FBUztFQUNULGlCQUFpQjtFQUNqQixTQUFTO0FBQ1g7O0FBRUE7RUFDRSxpQkFBaUI7RUFDakIsVUFBVTtFQUNWLGdCQUFnQjtFQUNoQixRQUFRO0FBQ1Y7O0FBRUE7RUFDRSxZQUFZO0VBQ1osZ0JBQWdCO0VBQ2hCLFNBQVM7RUFDVCxpQkFBaUI7QUFDbkI7O0FBRUE7RUFDRSxtQkFBbUI7RUFDbkIsV0FBVztFQUNYLFNBQVM7QUFDWDs7QUFFQTtFQUNFLG1CQUFtQjtFQUNuQixVQUFVO0VBQ1YsU0FBUztBQUNYOztBQUVBO0VBQ0UsWUFBWTtFQUNaLG1CQUFtQjtFQUNuQixVQUFVO0FBQ1o7O0FBRUE7RUFDRSxZQUFZO0VBQ1osbUJBQW1CO0VBQ25CLFlBQVk7RUFDWixVQUFVO0VBQ1YsV0FBVztFQUNYLFdBQVc7QUFDYjs7QUFFQTtFQUNFO0lBQ0UsWUFBWTtJQUNaLFdBQVc7RUFDYjtBQUNGOztBQUVBO0VBQ0U7SUFDRSxZQUFZO0lBQ1osV0FBVztFQUNiO0FBQ0Y7O0FBRUE7RUFDRTtJQUNFLFdBQVc7SUFDWCxhQUFhO0lBQ2IsVUFBVTtFQUNaO0FBQ0Y7O0FBRUE7RUFDRSxzQkFBc0I7RUFDdEIsWUFBWTtFQUNaLFlBQVk7RUFDWixjQUFjO0VBQ2QsWUFBWTtFQUNaLFVBQVU7RUFDVixrQkFBa0I7RUFDbEIsV0FBVztFQUNYLFdBQVc7QUFDYjs7QUFFQTtFQUNFLFVBQVU7QUFDWjs7QUFFQTtFQUNFLCtRQUErUTtBQUNqUjs7QUFFQTtFQUNFLGNBQWM7RUFDZCxTQUFTO0VBQ1Qsa0JBQWtCO0VBQ2xCLFFBQVE7QUFDVjs7QUFFQTtFQUNFLHdCQUF3QjtBQUMxQjs7QUFFQTtFQUNFLFlBQVk7QUFDZDs7QUFFQTtFQUNFLGlCQUFpQjtBQUNuQjs7QUFFQTs7OztFQUlFLG1CQUFtQjtBQUNyQiIsInNvdXJjZXNDb250ZW50IjpbIi8qIVxuICogQ3JvcHBlci5qcyB2MS41LjdcbiAqIGh0dHBzOi8vZmVuZ3l1YW5jaGVuLmdpdGh1Yi5pby9jcm9wcGVyanNcbiAqXG4gKiBDb3B5cmlnaHQgMjAxNS1wcmVzZW50IENoZW4gRmVuZ3l1YW5cbiAqIFJlbGVhc2VkIHVuZGVyIHRoZSBNSVQgbGljZW5zZVxuICpcbiAqIERhdGU6IDIwMjAtMDUtMjNUMDU6MjI6NTcuMjgzWlxuICovXG5cbi5jcm9wcGVyLWNvbnRhaW5lciB7XG4gIGRpcmVjdGlvbjogbHRyO1xuICBmb250LXNpemU6IDA7XG4gIGxpbmUtaGVpZ2h0OiAwO1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIC1tcy10b3VjaC1hY3Rpb246IG5vbmU7XG4gIHRvdWNoLWFjdGlvbjogbm9uZTtcbiAgLXdlYmtpdC11c2VyLXNlbGVjdDogbm9uZTtcbiAgLW1vei11c2VyLXNlbGVjdDogbm9uZTtcbiAgLW1zLXVzZXItc2VsZWN0OiBub25lO1xuICB1c2VyLXNlbGVjdDogbm9uZTtcbn1cblxuLmNyb3BwZXItY29udGFpbmVyIGltZyB7XG4gIGRpc3BsYXk6IGJsb2NrO1xuICBoZWlnaHQ6IDEwMCU7XG4gIGltYWdlLW9yaWVudGF0aW9uOiAwZGVnO1xuICBtYXgtaGVpZ2h0OiBub25lICFpbXBvcnRhbnQ7XG4gIG1heC13aWR0aDogbm9uZSAhaW1wb3J0YW50O1xuICBtaW4taGVpZ2h0OiAwICFpbXBvcnRhbnQ7XG4gIG1pbi13aWR0aDogMCAhaW1wb3J0YW50O1xuICB3aWR0aDogMTAwJTtcbn1cblxuLmNyb3BwZXItd3JhcC1ib3gsXG4uY3JvcHBlci1jYW52YXMsXG4uY3JvcHBlci1kcmFnLWJveCxcbi5jcm9wcGVyLWNyb3AtYm94LFxuLmNyb3BwZXItbW9kYWwge1xuICBib3R0b206IDA7XG4gIGxlZnQ6IDA7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgcmlnaHQ6IDA7XG4gIHRvcDogMDtcbn1cblxuLmNyb3BwZXItd3JhcC1ib3gsXG4uY3JvcHBlci1jYW52YXMge1xuICBvdmVyZmxvdzogaGlkZGVuO1xufVxuXG4uY3JvcHBlci1kcmFnLWJveCB7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmZmY7XG4gIG9wYWNpdHk6IDA7XG59XG5cbi5jcm9wcGVyLW1vZGFsIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogIzAwMDtcbiAgb3BhY2l0eTogMC41O1xufVxuXG4uY3JvcHBlci12aWV3LWJveCB7XG4gIGRpc3BsYXk6IGJsb2NrO1xuICBoZWlnaHQ6IDEwMCU7XG4gIG91dGxpbmU6IDFweCBzb2xpZCAjMzlmO1xuICBvdXRsaW5lLWNvbG9yOiByZ2JhKDUxLCAxNTMsIDI1NSwgMC43NSk7XG4gIG92ZXJmbG93OiBoaWRkZW47XG4gIHdpZHRoOiAxMDAlO1xufVxuXG4uY3JvcHBlci1kYXNoZWQge1xuICBib3JkZXI6IDAgZGFzaGVkICNlZWU7XG4gIGRpc3BsYXk6IGJsb2NrO1xuICBvcGFjaXR5OiAwLjU7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbn1cblxuLmNyb3BwZXItZGFzaGVkLmRhc2hlZC1oIHtcbiAgYm9yZGVyLWJvdHRvbS13aWR0aDogMXB4O1xuICBib3JkZXItdG9wLXdpZHRoOiAxcHg7XG4gIGhlaWdodDogY2FsYygxMDAlIC8gMyk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogY2FsYygxMDAlIC8gMyk7XG4gIHdpZHRoOiAxMDAlO1xufVxuXG4uY3JvcHBlci1kYXNoZWQuZGFzaGVkLXYge1xuICBib3JkZXItbGVmdC13aWR0aDogMXB4O1xuICBib3JkZXItcmlnaHQtd2lkdGg6IDFweDtcbiAgaGVpZ2h0OiAxMDAlO1xuICBsZWZ0OiBjYWxjKDEwMCUgLyAzKTtcbiAgdG9wOiAwO1xuICB3aWR0aDogY2FsYygxMDAlIC8gMyk7XG59XG5cbi5jcm9wcGVyLWNlbnRlciB7XG4gIGRpc3BsYXk6IGJsb2NrO1xuICBoZWlnaHQ6IDA7XG4gIGxlZnQ6IDUwJTtcbiAgb3BhY2l0eTogMC43NTtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICB0b3A6IDUwJTtcbiAgd2lkdGg6IDA7XG59XG5cbi5jcm9wcGVyLWNlbnRlcjo6YmVmb3JlLFxuLmNyb3BwZXItY2VudGVyOjphZnRlciB7XG4gIGJhY2tncm91bmQtY29sb3I6ICNlZWU7XG4gIGNvbnRlbnQ6ICcgJztcbiAgZGlzcGxheTogYmxvY2s7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbn1cblxuLmNyb3BwZXItY2VudGVyOjpiZWZvcmUge1xuICBoZWlnaHQ6IDFweDtcbiAgbGVmdDogLTNweDtcbiAgdG9wOiAwO1xuICB3aWR0aDogN3B4O1xufVxuXG4uY3JvcHBlci1jZW50ZXI6OmFmdGVyIHtcbiAgaGVpZ2h0OiA3cHg7XG4gIGxlZnQ6IDA7XG4gIHRvcDogLTNweDtcbiAgd2lkdGg6IDFweDtcbn1cblxuLmNyb3BwZXItZmFjZSxcbi5jcm9wcGVyLWxpbmUsXG4uY3JvcHBlci1wb2ludCB7XG4gIGRpc3BsYXk6IGJsb2NrO1xuICBoZWlnaHQ6IDEwMCU7XG4gIG9wYWNpdHk6IDAuMTtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICB3aWR0aDogMTAwJTtcbn1cblxuLmNyb3BwZXItZmFjZSB7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmZmY7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbn1cblxuLmNyb3BwZXItbGluZSB7XG4gIGJhY2tncm91bmQtY29sb3I6ICMzOWY7XG59XG5cbi5jcm9wcGVyLWxpbmUubGluZS1lIHtcbiAgY3Vyc29yOiBldy1yZXNpemU7XG4gIHJpZ2h0OiAtM3B4O1xuICB0b3A6IDA7XG4gIHdpZHRoOiA1cHg7XG59XG5cbi5jcm9wcGVyLWxpbmUubGluZS1uIHtcbiAgY3Vyc29yOiBucy1yZXNpemU7XG4gIGhlaWdodDogNXB4O1xuICBsZWZ0OiAwO1xuICB0b3A6IC0zcHg7XG59XG5cbi5jcm9wcGVyLWxpbmUubGluZS13IHtcbiAgY3Vyc29yOiBldy1yZXNpemU7XG4gIGxlZnQ6IC0zcHg7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDVweDtcbn1cblxuLmNyb3BwZXItbGluZS5saW5lLXMge1xuICBib3R0b206IC0zcHg7XG4gIGN1cnNvcjogbnMtcmVzaXplO1xuICBoZWlnaHQ6IDVweDtcbiAgbGVmdDogMDtcbn1cblxuLmNyb3BwZXItcG9pbnQge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMzlmO1xuICBoZWlnaHQ6IDVweDtcbiAgb3BhY2l0eTogMC43NTtcbiAgd2lkdGg6IDVweDtcbn1cblxuLmNyb3BwZXItcG9pbnQucG9pbnQtZSB7XG4gIGN1cnNvcjogZXctcmVzaXplO1xuICBtYXJnaW4tdG9wOiAtM3B4O1xuICByaWdodDogLTNweDtcbiAgdG9wOiA1MCU7XG59XG5cbi5jcm9wcGVyLXBvaW50LnBvaW50LW4ge1xuICBjdXJzb3I6IG5zLXJlc2l6ZTtcbiAgbGVmdDogNTAlO1xuICBtYXJnaW4tbGVmdDogLTNweDtcbiAgdG9wOiAtM3B4O1xufVxuXG4uY3JvcHBlci1wb2ludC5wb2ludC13IHtcbiAgY3Vyc29yOiBldy1yZXNpemU7XG4gIGxlZnQ6IC0zcHg7XG4gIG1hcmdpbi10b3A6IC0zcHg7XG4gIHRvcDogNTAlO1xufVxuXG4uY3JvcHBlci1wb2ludC5wb2ludC1zIHtcbiAgYm90dG9tOiAtM3B4O1xuICBjdXJzb3I6IHMtcmVzaXplO1xuICBsZWZ0OiA1MCU7XG4gIG1hcmdpbi1sZWZ0OiAtM3B4O1xufVxuXG4uY3JvcHBlci1wb2ludC5wb2ludC1uZSB7XG4gIGN1cnNvcjogbmVzdy1yZXNpemU7XG4gIHJpZ2h0OiAtM3B4O1xuICB0b3A6IC0zcHg7XG59XG5cbi5jcm9wcGVyLXBvaW50LnBvaW50LW53IHtcbiAgY3Vyc29yOiBud3NlLXJlc2l6ZTtcbiAgbGVmdDogLTNweDtcbiAgdG9wOiAtM3B4O1xufVxuXG4uY3JvcHBlci1wb2ludC5wb2ludC1zdyB7XG4gIGJvdHRvbTogLTNweDtcbiAgY3Vyc29yOiBuZXN3LXJlc2l6ZTtcbiAgbGVmdDogLTNweDtcbn1cblxuLmNyb3BwZXItcG9pbnQucG9pbnQtc2Uge1xuICBib3R0b206IC0zcHg7XG4gIGN1cnNvcjogbndzZS1yZXNpemU7XG4gIGhlaWdodDogMjBweDtcbiAgb3BhY2l0eTogMTtcbiAgcmlnaHQ6IC0zcHg7XG4gIHdpZHRoOiAyMHB4O1xufVxuXG5AbWVkaWEgKG1pbi13aWR0aDogNzY4cHgpIHtcbiAgLmNyb3BwZXItcG9pbnQucG9pbnQtc2Uge1xuICAgIGhlaWdodDogMTVweDtcbiAgICB3aWR0aDogMTVweDtcbiAgfVxufVxuXG5AbWVkaWEgKG1pbi13aWR0aDogOTkycHgpIHtcbiAgLmNyb3BwZXItcG9pbnQucG9pbnQtc2Uge1xuICAgIGhlaWdodDogMTBweDtcbiAgICB3aWR0aDogMTBweDtcbiAgfVxufVxuXG5AbWVkaWEgKG1pbi13aWR0aDogMTIwMHB4KSB7XG4gIC5jcm9wcGVyLXBvaW50LnBvaW50LXNlIHtcbiAgICBoZWlnaHQ6IDVweDtcbiAgICBvcGFjaXR5OiAwLjc1O1xuICAgIHdpZHRoOiA1cHg7XG4gIH1cbn1cblxuLmNyb3BwZXItcG9pbnQucG9pbnQtc2U6OmJlZm9yZSB7XG4gIGJhY2tncm91bmQtY29sb3I6ICMzOWY7XG4gIGJvdHRvbTogLTUwJTtcbiAgY29udGVudDogJyAnO1xuICBkaXNwbGF5OiBibG9jaztcbiAgaGVpZ2h0OiAyMDAlO1xuICBvcGFjaXR5OiAwO1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHJpZ2h0OiAtNTAlO1xuICB3aWR0aDogMjAwJTtcbn1cblxuLmNyb3BwZXItaW52aXNpYmxlIHtcbiAgb3BhY2l0eTogMDtcbn1cblxuLmNyb3BwZXItYmcge1xuICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoJ2RhdGE6aW1hZ2UvcG5nO2Jhc2U2NCxpVkJPUncwS0dnb0FBQUFOU1VoRVVnQUFBQkFBQUFBUUFRTUFBQUFsUFcwaUFBQUFBM05DU1ZRSUNBamI0VS9nQUFBQUJsQk1WRVhNek16Ly8vL1RqUlYyQUFBQUNYQklXWE1BQUFyckFBQUs2d0dDaXcxYUFBQUFISFJGV0hSVGIyWjBkMkZ5WlFCQlpHOWlaU0JHYVhKbGQyOXlhM01nUTFNMjZMeXlqQUFBQUJGSlJFRlVDSmxqK00vQWdCVmhGLzBQQUg2L0QvSGtEeE9HQUFBQUFFbEZUa1N1UW1DQycpO1xufVxuXG4uY3JvcHBlci1oaWRlIHtcbiAgZGlzcGxheTogYmxvY2s7XG4gIGhlaWdodDogMDtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICB3aWR0aDogMDtcbn1cblxuLmNyb3BwZXItaGlkZGVuIHtcbiAgZGlzcGxheTogbm9uZSAhaW1wb3J0YW50O1xufVxuXG4uY3JvcHBlci1tb3ZlIHtcbiAgY3Vyc29yOiBtb3ZlO1xufVxuXG4uY3JvcHBlci1jcm9wIHtcbiAgY3Vyc29yOiBjcm9zc2hhaXI7XG59XG5cbi5jcm9wcGVyLWRpc2FibGVkIC5jcm9wcGVyLWRyYWctYm94LFxuLmNyb3BwZXItZGlzYWJsZWQgLmNyb3BwZXItZmFjZSxcbi5jcm9wcGVyLWRpc2FibGVkIC5jcm9wcGVyLWxpbmUsXG4uY3JvcHBlci1kaXNhYmxlZCAuY3JvcHBlci1wb2ludCB7XG4gIGN1cnNvcjogbm90LWFsbG93ZWQ7XG59XG4iXSwic291cmNlUm9vdCI6IiJ9 */</style><style>.avatar-cropper .avatar-cropper-overlay {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99999;
+}
+.avatar-cropper .avatar-cropper-overlay-inline {
+  position: initial;
+}
+.avatar-cropper .avatar-cropper-img-input {
+  display: none;
+}
+.avatar-cropper .avatar-cropper-close {
+  float: right;
+  padding: 20px;
+  font-size: 3rem;
+  color: #fff;
+  font-weight: 100;
+  text-shadow: 0px 1px rgba(40, 40, 40, 0.3);
+}
+.avatar-cropper .avatar-cropper-mark {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+.avatar-cropper .avatar-cropper-container {
+  background: #fff;
+  z-index: 999;
+  box-shadow: 1px 1px 5px rgba(100, 100, 100, 0.14);
+}
+.avatar-cropper .avatar-cropper-container .avatar-cropper-image-container {
+  position: relative;
+  max-width: 400px;
+  height: 300px;
+}
+.avatar-cropper .avatar-cropper-container img {
+  max-width: 100%;
+  height: 100%;
+}
+.avatar-cropper .avatar-cropper-container .avatar-cropper-footer {
+  display: flex;
+  align-items: stretch;
+  align-content: stretch;
+  justify-content: space-between;
+}
+.avatar-cropper .avatar-cropper-container .avatar-cropper-footer .avatar-cropper-btn {
+  width: 50%;
+  padding: 15px 0;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  outline: none;
+}
+.avatar-cropper .avatar-cropper-container .avatar-cropper-footer .avatar-cropper-btn:hover {
+  background-color: #2aabd2;
+  color: #fff;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9zcmMvQXZhdGFyQ3JvcHBlci52dWUiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxrQkFBa0I7RUFDbEIsYUFBYTtFQUNiLG1CQUFtQjtFQUNuQix1QkFBdUI7RUFDdkIsZUFBZTtFQUNmLE1BQU07RUFDTixPQUFPO0VBQ1AsUUFBUTtFQUNSLFNBQVM7RUFDVCxjQUFjO0FBQ2hCO0FBQ0E7RUFDRSxpQkFBaUI7QUFDbkI7QUFDQTtFQUNFLGFBQWE7QUFDZjtBQUNBO0VBQ0UsWUFBWTtFQUNaLGFBQWE7RUFDYixlQUFlO0VBQ2YsV0FBVztFQUNYLGdCQUFnQjtFQUNoQiwwQ0FBMEM7QUFDNUM7QUFDQTtFQUNFLGVBQWU7RUFDZixNQUFNO0VBQ04sT0FBTztFQUNQLFFBQVE7RUFDUixTQUFTO0VBQ1QsOEJBQThCO0FBQ2hDO0FBQ0E7RUFDRSxnQkFBZ0I7RUFDaEIsWUFBWTtFQUNaLGlEQUFpRDtBQUNuRDtBQUNBO0VBQ0Usa0JBQWtCO0VBQ2xCLGdCQUFnQjtFQUNoQixhQUFhO0FBQ2Y7QUFDQTtFQUNFLGVBQWU7RUFDZixZQUFZO0FBQ2Q7QUFDQTtFQUNFLGFBQWE7RUFDYixvQkFBb0I7RUFDcEIsc0JBQXNCO0VBQ3RCLDhCQUE4QjtBQUNoQztBQUNBO0VBQ0UsVUFBVTtFQUNWLGVBQWU7RUFDZixlQUFlO0VBQ2YsWUFBWTtFQUNaLHVCQUF1QjtFQUN2QixhQUFhO0FBQ2Y7QUFDQTtFQUNFLHlCQUF5QjtFQUN6QixXQUFXO0FBQ2IiLCJzb3VyY2VzQ29udGVudCI6WyIuYXZhdGFyLWNyb3BwZXIgLmF2YXRhci1jcm9wcGVyLW92ZXJsYXkge1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBwb3NpdGlvbjogZml4ZWQ7XG4gIHRvcDogMDtcbiAgbGVmdDogMDtcbiAgcmlnaHQ6IDA7XG4gIGJvdHRvbTogMDtcbiAgei1pbmRleDogOTk5OTk7XG59XG4uYXZhdGFyLWNyb3BwZXIgLmF2YXRhci1jcm9wcGVyLW92ZXJsYXktaW5saW5lIHtcbiAgcG9zaXRpb246IGluaXRpYWw7XG59XG4uYXZhdGFyLWNyb3BwZXIgLmF2YXRhci1jcm9wcGVyLWltZy1pbnB1dCB7XG4gIGRpc3BsYXk6IG5vbmU7XG59XG4uYXZhdGFyLWNyb3BwZXIgLmF2YXRhci1jcm9wcGVyLWNsb3NlIHtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAyMHB4O1xuICBmb250LXNpemU6IDNyZW07XG4gIGNvbG9yOiAjZmZmO1xuICBmb250LXdlaWdodDogMTAwO1xuICB0ZXh0LXNoYWRvdzogMHB4IDFweCByZ2JhKDQwLCA0MCwgNDAsIDAuMyk7XG59XG4uYXZhdGFyLWNyb3BwZXIgLmF2YXRhci1jcm9wcGVyLW1hcmsge1xuICBwb3NpdGlvbjogZml4ZWQ7XG4gIHRvcDogMDtcbiAgbGVmdDogMDtcbiAgcmlnaHQ6IDA7XG4gIGJvdHRvbTogMDtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjEpO1xufVxuLmF2YXRhci1jcm9wcGVyIC5hdmF0YXItY3JvcHBlci1jb250YWluZXIge1xuICBiYWNrZ3JvdW5kOiAjZmZmO1xuICB6LWluZGV4OiA5OTk7XG4gIGJveC1zaGFkb3c6IDFweCAxcHggNXB4IHJnYmEoMTAwLCAxMDAsIDEwMCwgMC4xNCk7XG59XG4uYXZhdGFyLWNyb3BwZXIgLmF2YXRhci1jcm9wcGVyLWNvbnRhaW5lciAuYXZhdGFyLWNyb3BwZXItaW1hZ2UtY29udGFpbmVyIHtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBtYXgtd2lkdGg6IDQwMHB4O1xuICBoZWlnaHQ6IDMwMHB4O1xufVxuLmF2YXRhci1jcm9wcGVyIC5hdmF0YXItY3JvcHBlci1jb250YWluZXIgaW1nIHtcbiAgbWF4LXdpZHRoOiAxMDAlO1xuICBoZWlnaHQ6IDEwMCU7XG59XG4uYXZhdGFyLWNyb3BwZXIgLmF2YXRhci1jcm9wcGVyLWNvbnRhaW5lciAuYXZhdGFyLWNyb3BwZXItZm9vdGVyIHtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IHN0cmV0Y2g7XG4gIGFsaWduLWNvbnRlbnQ6IHN0cmV0Y2g7XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2Vlbjtcbn1cbi5hdmF0YXItY3JvcHBlciAuYXZhdGFyLWNyb3BwZXItY29udGFpbmVyIC5hdmF0YXItY3JvcHBlci1mb290ZXIgLmF2YXRhci1jcm9wcGVyLWJ0biB7XG4gIHdpZHRoOiA1MCU7XG4gIHBhZGRpbmc6IDE1cHggMDtcbiAgY3Vyc29yOiBwb2ludGVyO1xuICBib3JkZXI6IG5vbmU7XG4gIGJhY2tncm91bmQ6IHRyYW5zcGFyZW50O1xuICBvdXRsaW5lOiBub25lO1xufVxuLmF2YXRhci1jcm9wcGVyIC5hdmF0YXItY3JvcHBlci1jb250YWluZXIgLmF2YXRhci1jcm9wcGVyLWZvb3RlciAuYXZhdGFyLWNyb3BwZXItYnRuOmhvdmVyIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogIzJhYWJkMjtcbiAgY29sb3I6ICNmZmY7XG59XG4iXSwic291cmNlUm9vdCI6IiJ9 */</style><link href="https://www.googletagmanager.com/" rel="preconnect"><script async="" src="./index_files/js(2)"></script><style type="text/css" id="vuetify-theme-stylesheet">:root {
+  --v-anchor-base: #007bfe;
+  --v-primary-base: #007bfe;
+  --v-primary-lighten5: #d3ffff;
+  --v-primary-lighten4: #b3e6ff;
+  --v-primary-lighten3: #93caff;
+  --v-primary-lighten2: #70afff;
+  --v-primary-lighten1: #4a94ff;
+  --v-primary-darken1: #0063e1;
+  --v-primary-darken2: #004cc4;
+  --v-primary-darken3: #0036a8;
+  --v-primary-darken4: #00238d;
+  --v-secondary-base: #815fc4;
+  --v-secondary-lighten5: #ffe5ff;
+  --v-secondary-lighten4: #f3c9ff;
+  --v-secondary-lighten3: #d5adff;
+  --v-secondary-lighten2: #b992fd;
+  --v-secondary-lighten1: #9d78e0;
+  --v-secondary-darken1: #6647a8;
+  --v-secondary-darken2: #4b2f8e;
+  --v-secondary-darken3: #2f1873;
+  --v-secondary-darken4: #0f025a;
+  --v-accent-base: #c5a7ef;
+  --v-accent-lighten5: #ffffff;
+  --v-accent-lighten4: #ffffff;
+  --v-accent-lighten3: #fffbff;
+  --v-accent-lighten2: #fedeff;
+  --v-accent-lighten1: #e1c2ff;
+  --v-accent-darken1: #a98cd3;
+  --v-accent-darken2: #8e73b7;
+  --v-accent-darken3: #745a9c;
+  --v-accent-darken4: #5a4281;
+  --v-error-base: #ff5252;
+  --v-error-lighten5: #ffe4d5;
+  --v-error-lighten4: #ffc6b9;
+  --v-error-lighten3: #ffa99e;
+  --v-error-lighten2: #ff8c84;
+  --v-error-lighten1: #ff6f6a;
+  --v-error-darken1: #df323b;
+  --v-error-darken2: #bf0025;
+  --v-error-darken3: #9f0010;
+  --v-error-darken4: #800000;
+  --v-info-base: #2196f3;
+  --v-info-lighten5: #d4ffff;
+  --v-info-lighten4: #b5ffff;
+  --v-info-lighten3: #95e8ff;
+  --v-info-lighten2: #75ccff;
+  --v-info-lighten1: #51b0ff;
+  --v-info-darken1: #007cd6;
+  --v-info-darken2: #0064ba;
+  --v-info-darken3: #004d9f;
+  --v-info-darken4: #003784;
+  --v-success-base: #4caf50;
+  --v-success-lighten5: #dcffd6;
+  --v-success-lighten4: #beffba;
+  --v-success-lighten3: #a2ff9e;
+  --v-success-lighten2: #85e783;
+  --v-success-lighten1: #69cb69;
+  --v-success-darken1: #2d9437;
+  --v-success-darken2: #00791e;
+  --v-success-darken3: #006000;
+  --v-success-darken4: #004700;
+  --v-warning-base: #ffc107;
+  --v-warning-lighten5: #ffffae;
+  --v-warning-lighten4: #ffff91;
+  --v-warning-lighten3: #ffff74;
+  --v-warning-lighten2: #fff956;
+  --v-warning-lighten1: #ffdd37;
+  --v-warning-darken1: #e0a600;
+  --v-warning-darken2: #c18c00;
+  --v-warning-darken3: #a27300;
+  --v-warning-darken4: #855a00;
+}
+
+.v-application a { color: var(--v-anchor-base); }
+.v-application .primary {
+  background-color: var(--v-primary-base) !important;
+  border-color: var(--v-primary-base) !important;
+}
+.v-application .primary--text {
+  color: var(--v-primary-base) !important;
+  caret-color: var(--v-primary-base) !important;
+}
+.v-application .primary.lighten-5 {
+  background-color: var(--v-primary-lighten5) !important;
+  border-color: var(--v-primary-lighten5) !important;
+}
+.v-application .primary--text.text--lighten-5 {
+  color: var(--v-primary-lighten5) !important;
+  caret-color: var(--v-primary-lighten5) !important;
+}
+.v-application .primary.lighten-4 {
+  background-color: var(--v-primary-lighten4) !important;
+  border-color: var(--v-primary-lighten4) !important;
+}
+.v-application .primary--text.text--lighten-4 {
+  color: var(--v-primary-lighten4) !important;
+  caret-color: var(--v-primary-lighten4) !important;
+}
+.v-application .primary.lighten-3 {
+  background-color: var(--v-primary-lighten3) !important;
+  border-color: var(--v-primary-lighten3) !important;
+}
+.v-application .primary--text.text--lighten-3 {
+  color: var(--v-primary-lighten3) !important;
+  caret-color: var(--v-primary-lighten3) !important;
+}
+.v-application .primary.lighten-2 {
+  background-color: var(--v-primary-lighten2) !important;
+  border-color: var(--v-primary-lighten2) !important;
+}
+.v-application .primary--text.text--lighten-2 {
+  color: var(--v-primary-lighten2) !important;
+  caret-color: var(--v-primary-lighten2) !important;
+}
+.v-application .primary.lighten-1 {
+  background-color: var(--v-primary-lighten1) !important;
+  border-color: var(--v-primary-lighten1) !important;
+}
+.v-application .primary--text.text--lighten-1 {
+  color: var(--v-primary-lighten1) !important;
+  caret-color: var(--v-primary-lighten1) !important;
+}
+.v-application .primary.darken-1 {
+  background-color: var(--v-primary-darken1) !important;
+  border-color: var(--v-primary-darken1) !important;
+}
+.v-application .primary--text.text--darken-1 {
+  color: var(--v-primary-darken1) !important;
+  caret-color: var(--v-primary-darken1) !important;
+}
+.v-application .primary.darken-2 {
+  background-color: var(--v-primary-darken2) !important;
+  border-color: var(--v-primary-darken2) !important;
+}
+.v-application .primary--text.text--darken-2 {
+  color: var(--v-primary-darken2) !important;
+  caret-color: var(--v-primary-darken2) !important;
+}
+.v-application .primary.darken-3 {
+  background-color: var(--v-primary-darken3) !important;
+  border-color: var(--v-primary-darken3) !important;
+}
+.v-application .primary--text.text--darken-3 {
+  color: var(--v-primary-darken3) !important;
+  caret-color: var(--v-primary-darken3) !important;
+}
+.v-application .primary.darken-4 {
+  background-color: var(--v-primary-darken4) !important;
+  border-color: var(--v-primary-darken4) !important;
+}
+.v-application .primary--text.text--darken-4 {
+  color: var(--v-primary-darken4) !important;
+  caret-color: var(--v-primary-darken4) !important;
+}
+.v-application .secondary {
+  background-color: var(--v-secondary-base) !important;
+  border-color: var(--v-secondary-base) !important;
+}
+.v-application .secondary--text {
+  color: var(--v-secondary-base) !important;
+  caret-color: var(--v-secondary-base) !important;
+}
+.v-application .secondary.lighten-5 {
+  background-color: var(--v-secondary-lighten5) !important;
+  border-color: var(--v-secondary-lighten5) !important;
+}
+.v-application .secondary--text.text--lighten-5 {
+  color: var(--v-secondary-lighten5) !important;
+  caret-color: var(--v-secondary-lighten5) !important;
+}
+.v-application .secondary.lighten-4 {
+  background-color: var(--v-secondary-lighten4) !important;
+  border-color: var(--v-secondary-lighten4) !important;
+}
+.v-application .secondary--text.text--lighten-4 {
+  color: var(--v-secondary-lighten4) !important;
+  caret-color: var(--v-secondary-lighten4) !important;
+}
+.v-application .secondary.lighten-3 {
+  background-color: var(--v-secondary-lighten3) !important;
+  border-color: var(--v-secondary-lighten3) !important;
+}
+.v-application .secondary--text.text--lighten-3 {
+  color: var(--v-secondary-lighten3) !important;
+  caret-color: var(--v-secondary-lighten3) !important;
+}
+.v-application .secondary.lighten-2 {
+  background-color: var(--v-secondary-lighten2) !important;
+  border-color: var(--v-secondary-lighten2) !important;
+}
+.v-application .secondary--text.text--lighten-2 {
+  color: var(--v-secondary-lighten2) !important;
+  caret-color: var(--v-secondary-lighten2) !important;
+}
+.v-application .secondary.lighten-1 {
+  background-color: var(--v-secondary-lighten1) !important;
+  border-color: var(--v-secondary-lighten1) !important;
+}
+.v-application .secondary--text.text--lighten-1 {
+  color: var(--v-secondary-lighten1) !important;
+  caret-color: var(--v-secondary-lighten1) !important;
+}
+.v-application .secondary.darken-1 {
+  background-color: var(--v-secondary-darken1) !important;
+  border-color: var(--v-secondary-darken1) !important;
+}
+.v-application .secondary--text.text--darken-1 {
+  color: var(--v-secondary-darken1) !important;
+  caret-color: var(--v-secondary-darken1) !important;
+}
+.v-application .secondary.darken-2 {
+  background-color: var(--v-secondary-darken2) !important;
+  border-color: var(--v-secondary-darken2) !important;
+}
+.v-application .secondary--text.text--darken-2 {
+  color: var(--v-secondary-darken2) !important;
+  caret-color: var(--v-secondary-darken2) !important;
+}
+.v-application .secondary.darken-3 {
+  background-color: var(--v-secondary-darken3) !important;
+  border-color: var(--v-secondary-darken3) !important;
+}
+.v-application .secondary--text.text--darken-3 {
+  color: var(--v-secondary-darken3) !important;
+  caret-color: var(--v-secondary-darken3) !important;
+}
+.v-application .secondary.darken-4 {
+  background-color: var(--v-secondary-darken4) !important;
+  border-color: var(--v-secondary-darken4) !important;
+}
+.v-application .secondary--text.text--darken-4 {
+  color: var(--v-secondary-darken4) !important;
+  caret-color: var(--v-secondary-darken4) !important;
+}
+.v-application .accent {
+  background-color: var(--v-accent-base) !important;
+  border-color: var(--v-accent-base) !important;
+}
+.v-application .accent--text {
+  color: var(--v-accent-base) !important;
+  caret-color: var(--v-accent-base) !important;
+}
+.v-application .accent.lighten-5 {
+  background-color: var(--v-accent-lighten5) !important;
+  border-color: var(--v-accent-lighten5) !important;
+}
+.v-application .accent--text.text--lighten-5 {
+  color: var(--v-accent-lighten5) !important;
+  caret-color: var(--v-accent-lighten5) !important;
+}
+.v-application .accent.lighten-4 {
+  background-color: var(--v-accent-lighten4) !important;
+  border-color: var(--v-accent-lighten4) !important;
+}
+.v-application .accent--text.text--lighten-4 {
+  color: var(--v-accent-lighten4) !important;
+  caret-color: var(--v-accent-lighten4) !important;
+}
+.v-application .accent.lighten-3 {
+  background-color: var(--v-accent-lighten3) !important;
+  border-color: var(--v-accent-lighten3) !important;
+}
+.v-application .accent--text.text--lighten-3 {
+  color: var(--v-accent-lighten3) !important;
+  caret-color: var(--v-accent-lighten3) !important;
+}
+.v-application .accent.lighten-2 {
+  background-color: var(--v-accent-lighten2) !important;
+  border-color: var(--v-accent-lighten2) !important;
+}
+.v-application .accent--text.text--lighten-2 {
+  color: var(--v-accent-lighten2) !important;
+  caret-color: var(--v-accent-lighten2) !important;
+}
+.v-application .accent.lighten-1 {
+  background-color: var(--v-accent-lighten1) !important;
+  border-color: var(--v-accent-lighten1) !important;
+}
+.v-application .accent--text.text--lighten-1 {
+  color: var(--v-accent-lighten1) !important;
+  caret-color: var(--v-accent-lighten1) !important;
+}
+.v-application .accent.darken-1 {
+  background-color: var(--v-accent-darken1) !important;
+  border-color: var(--v-accent-darken1) !important;
+}
+.v-application .accent--text.text--darken-1 {
+  color: var(--v-accent-darken1) !important;
+  caret-color: var(--v-accent-darken1) !important;
+}
+.v-application .accent.darken-2 {
+  background-color: var(--v-accent-darken2) !important;
+  border-color: var(--v-accent-darken2) !important;
+}
+.v-application .accent--text.text--darken-2 {
+  color: var(--v-accent-darken2) !important;
+  caret-color: var(--v-accent-darken2) !important;
+}
+.v-application .accent.darken-3 {
+  background-color: var(--v-accent-darken3) !important;
+  border-color: var(--v-accent-darken3) !important;
+}
+.v-application .accent--text.text--darken-3 {
+  color: var(--v-accent-darken3) !important;
+  caret-color: var(--v-accent-darken3) !important;
+}
+.v-application .accent.darken-4 {
+  background-color: var(--v-accent-darken4) !important;
+  border-color: var(--v-accent-darken4) !important;
+}
+.v-application .accent--text.text--darken-4 {
+  color: var(--v-accent-darken4) !important;
+  caret-color: var(--v-accent-darken4) !important;
+}
+.v-application .error {
+  background-color: var(--v-error-base) !important;
+  border-color: var(--v-error-base) !important;
+}
+.v-application .error--text {
+  color: var(--v-error-base) !important;
+  caret-color: var(--v-error-base) !important;
+}
+.v-application .error.lighten-5 {
+  background-color: var(--v-error-lighten5) !important;
+  border-color: var(--v-error-lighten5) !important;
+}
+.v-application .error--text.text--lighten-5 {
+  color: var(--v-error-lighten5) !important;
+  caret-color: var(--v-error-lighten5) !important;
+}
+.v-application .error.lighten-4 {
+  background-color: var(--v-error-lighten4) !important;
+  border-color: var(--v-error-lighten4) !important;
+}
+.v-application .error--text.text--lighten-4 {
+  color: var(--v-error-lighten4) !important;
+  caret-color: var(--v-error-lighten4) !important;
+}
+.v-application .error.lighten-3 {
+  background-color: var(--v-error-lighten3) !important;
+  border-color: var(--v-error-lighten3) !important;
+}
+.v-application .error--text.text--lighten-3 {
+  color: var(--v-error-lighten3) !important;
+  caret-color: var(--v-error-lighten3) !important;
+}
+.v-application .error.lighten-2 {
+  background-color: var(--v-error-lighten2) !important;
+  border-color: var(--v-error-lighten2) !important;
+}
+.v-application .error--text.text--lighten-2 {
+  color: var(--v-error-lighten2) !important;
+  caret-color: var(--v-error-lighten2) !important;
+}
+.v-application .error.lighten-1 {
+  background-color: var(--v-error-lighten1) !important;
+  border-color: var(--v-error-lighten1) !important;
+}
+.v-application .error--text.text--lighten-1 {
+  color: var(--v-error-lighten1) !important;
+  caret-color: var(--v-error-lighten1) !important;
+}
+.v-application .error.darken-1 {
+  background-color: var(--v-error-darken1) !important;
+  border-color: var(--v-error-darken1) !important;
+}
+.v-application .error--text.text--darken-1 {
+  color: var(--v-error-darken1) !important;
+  caret-color: var(--v-error-darken1) !important;
+}
+.v-application .error.darken-2 {
+  background-color: var(--v-error-darken2) !important;
+  border-color: var(--v-error-darken2) !important;
+}
+.v-application .error--text.text--darken-2 {
+  color: var(--v-error-darken2) !important;
+  caret-color: var(--v-error-darken2) !important;
+}
+.v-application .error.darken-3 {
+  background-color: var(--v-error-darken3) !important;
+  border-color: var(--v-error-darken3) !important;
+}
+.v-application .error--text.text--darken-3 {
+  color: var(--v-error-darken3) !important;
+  caret-color: var(--v-error-darken3) !important;
+}
+.v-application .error.darken-4 {
+  background-color: var(--v-error-darken4) !important;
+  border-color: var(--v-error-darken4) !important;
+}
+.v-application .error--text.text--darken-4 {
+  color: var(--v-error-darken4) !important;
+  caret-color: var(--v-error-darken4) !important;
+}
+.v-application .info {
+  background-color: var(--v-info-base) !important;
+  border-color: var(--v-info-base) !important;
+}
+.v-application .info--text {
+  color: var(--v-info-base) !important;
+  caret-color: var(--v-info-base) !important;
+}
+.v-application .info.lighten-5 {
+  background-color: var(--v-info-lighten5) !important;
+  border-color: var(--v-info-lighten5) !important;
+}
+.v-application .info--text.text--lighten-5 {
+  color: var(--v-info-lighten5) !important;
+  caret-color: var(--v-info-lighten5) !important;
+}
+.v-application .info.lighten-4 {
+  background-color: var(--v-info-lighten4) !important;
+  border-color: var(--v-info-lighten4) !important;
+}
+.v-application .info--text.text--lighten-4 {
+  color: var(--v-info-lighten4) !important;
+  caret-color: var(--v-info-lighten4) !important;
+}
+.v-application .info.lighten-3 {
+  background-color: var(--v-info-lighten3) !important;
+  border-color: var(--v-info-lighten3) !important;
+}
+.v-application .info--text.text--lighten-3 {
+  color: var(--v-info-lighten3) !important;
+  caret-color: var(--v-info-lighten3) !important;
+}
+.v-application .info.lighten-2 {
+  background-color: var(--v-info-lighten2) !important;
+  border-color: var(--v-info-lighten2) !important;
+}
+.v-application .info--text.text--lighten-2 {
+  color: var(--v-info-lighten2) !important;
+  caret-color: var(--v-info-lighten2) !important;
+}
+.v-application .info.lighten-1 {
+  background-color: var(--v-info-lighten1) !important;
+  border-color: var(--v-info-lighten1) !important;
+}
+.v-application .info--text.text--lighten-1 {
+  color: var(--v-info-lighten1) !important;
+  caret-color: var(--v-info-lighten1) !important;
+}
+.v-application .info.darken-1 {
+  background-color: var(--v-info-darken1) !important;
+  border-color: var(--v-info-darken1) !important;
+}
+.v-application .info--text.text--darken-1 {
+  color: var(--v-info-darken1) !important;
+  caret-color: var(--v-info-darken1) !important;
+}
+.v-application .info.darken-2 {
+  background-color: var(--v-info-darken2) !important;
+  border-color: var(--v-info-darken2) !important;
+}
+.v-application .info--text.text--darken-2 {
+  color: var(--v-info-darken2) !important;
+  caret-color: var(--v-info-darken2) !important;
+}
+.v-application .info.darken-3 {
+  background-color: var(--v-info-darken3) !important;
+  border-color: var(--v-info-darken3) !important;
+}
+.v-application .info--text.text--darken-3 {
+  color: var(--v-info-darken3) !important;
+  caret-color: var(--v-info-darken3) !important;
+}
+.v-application .info.darken-4 {
+  background-color: var(--v-info-darken4) !important;
+  border-color: var(--v-info-darken4) !important;
+}
+.v-application .info--text.text--darken-4 {
+  color: var(--v-info-darken4) !important;
+  caret-color: var(--v-info-darken4) !important;
+}
+.v-application .success {
+  background-color: var(--v-success-base) !important;
+  border-color: var(--v-success-base) !important;
+}
+.v-application .success--text {
+  color: var(--v-success-base) !important;
+  caret-color: var(--v-success-base) !important;
+}
+.v-application .success.lighten-5 {
+  background-color: var(--v-success-lighten5) !important;
+  border-color: var(--v-success-lighten5) !important;
+}
+.v-application .success--text.text--lighten-5 {
+  color: var(--v-success-lighten5) !important;
+  caret-color: var(--v-success-lighten5) !important;
+}
+.v-application .success.lighten-4 {
+  background-color: var(--v-success-lighten4) !important;
+  border-color: var(--v-success-lighten4) !important;
+}
+.v-application .success--text.text--lighten-4 {
+  color: var(--v-success-lighten4) !important;
+  caret-color: var(--v-success-lighten4) !important;
+}
+.v-application .success.lighten-3 {
+  background-color: var(--v-success-lighten3) !important;
+  border-color: var(--v-success-lighten3) !important;
+}
+.v-application .success--text.text--lighten-3 {
+  color: var(--v-success-lighten3) !important;
+  caret-color: var(--v-success-lighten3) !important;
+}
+.v-application .success.lighten-2 {
+  background-color: var(--v-success-lighten2) !important;
+  border-color: var(--v-success-lighten2) !important;
+}
+.v-application .success--text.text--lighten-2 {
+  color: var(--v-success-lighten2) !important;
+  caret-color: var(--v-success-lighten2) !important;
+}
+.v-application .success.lighten-1 {
+  background-color: var(--v-success-lighten1) !important;
+  border-color: var(--v-success-lighten1) !important;
+}
+.v-application .success--text.text--lighten-1 {
+  color: var(--v-success-lighten1) !important;
+  caret-color: var(--v-success-lighten1) !important;
+}
+.v-application .success.darken-1 {
+  background-color: var(--v-success-darken1) !important;
+  border-color: var(--v-success-darken1) !important;
+}
+.v-application .success--text.text--darken-1 {
+  color: var(--v-success-darken1) !important;
+  caret-color: var(--v-success-darken1) !important;
+}
+.v-application .success.darken-2 {
+  background-color: var(--v-success-darken2) !important;
+  border-color: var(--v-success-darken2) !important;
+}
+.v-application .success--text.text--darken-2 {
+  color: var(--v-success-darken2) !important;
+  caret-color: var(--v-success-darken2) !important;
+}
+.v-application .success.darken-3 {
+  background-color: var(--v-success-darken3) !important;
+  border-color: var(--v-success-darken3) !important;
+}
+.v-application .success--text.text--darken-3 {
+  color: var(--v-success-darken3) !important;
+  caret-color: var(--v-success-darken3) !important;
+}
+.v-application .success.darken-4 {
+  background-color: var(--v-success-darken4) !important;
+  border-color: var(--v-success-darken4) !important;
+}
+.v-application .success--text.text--darken-4 {
+  color: var(--v-success-darken4) !important;
+  caret-color: var(--v-success-darken4) !important;
+}
+.v-application .warning {
+  background-color: var(--v-warning-base) !important;
+  border-color: var(--v-warning-base) !important;
+}
+.v-application .warning--text {
+  color: var(--v-warning-base) !important;
+  caret-color: var(--v-warning-base) !important;
+}
+.v-application .warning.lighten-5 {
+  background-color: var(--v-warning-lighten5) !important;
+  border-color: var(--v-warning-lighten5) !important;
+}
+.v-application .warning--text.text--lighten-5 {
+  color: var(--v-warning-lighten5) !important;
+  caret-color: var(--v-warning-lighten5) !important;
+}
+.v-application .warning.lighten-4 {
+  background-color: var(--v-warning-lighten4) !important;
+  border-color: var(--v-warning-lighten4) !important;
+}
+.v-application .warning--text.text--lighten-4 {
+  color: var(--v-warning-lighten4) !important;
+  caret-color: var(--v-warning-lighten4) !important;
+}
+.v-application .warning.lighten-3 {
+  background-color: var(--v-warning-lighten3) !important;
+  border-color: var(--v-warning-lighten3) !important;
+}
+.v-application .warning--text.text--lighten-3 {
+  color: var(--v-warning-lighten3) !important;
+  caret-color: var(--v-warning-lighten3) !important;
+}
+.v-application .warning.lighten-2 {
+  background-color: var(--v-warning-lighten2) !important;
+  border-color: var(--v-warning-lighten2) !important;
+}
+.v-application .warning--text.text--lighten-2 {
+  color: var(--v-warning-lighten2) !important;
+  caret-color: var(--v-warning-lighten2) !important;
+}
+.v-application .warning.lighten-1 {
+  background-color: var(--v-warning-lighten1) !important;
+  border-color: var(--v-warning-lighten1) !important;
+}
+.v-application .warning--text.text--lighten-1 {
+  color: var(--v-warning-lighten1) !important;
+  caret-color: var(--v-warning-lighten1) !important;
+}
+.v-application .warning.darken-1 {
+  background-color: var(--v-warning-darken1) !important;
+  border-color: var(--v-warning-darken1) !important;
+}
+.v-application .warning--text.text--darken-1 {
+  color: var(--v-warning-darken1) !important;
+  caret-color: var(--v-warning-darken1) !important;
+}
+.v-application .warning.darken-2 {
+  background-color: var(--v-warning-darken2) !important;
+  border-color: var(--v-warning-darken2) !important;
+}
+.v-application .warning--text.text--darken-2 {
+  color: var(--v-warning-darken2) !important;
+  caret-color: var(--v-warning-darken2) !important;
+}
+.v-application .warning.darken-3 {
+  background-color: var(--v-warning-darken3) !important;
+  border-color: var(--v-warning-darken3) !important;
+}
+.v-application .warning--text.text--darken-3 {
+  color: var(--v-warning-darken3) !important;
+  caret-color: var(--v-warning-darken3) !important;
+}
+.v-application .warning.darken-4 {
+  background-color: var(--v-warning-darken4) !important;
+  border-color: var(--v-warning-darken4) !important;
+}
+.v-application .warning--text.text--darken-4 {
+  color: var(--v-warning-darken4) !important;
+  caret-color: var(--v-warning-darken4) !important;
+}</style><link rel="stylesheet" type="text/css" href="./index_files/7861.e7ff96fc.css"><link rel="stylesheet" type="text/css" href="./index_files/3989.1e941c65.css"><link rel="stylesheet" type="text/css" href="./index_files/2927.74c86e93.css"><link rel="stylesheet" type="text/css" href="./index_files/9810.cddfbb32.css"><link rel="stylesheet" type="text/css" href="./index_files/5406.15e1c155.css"><link rel="stylesheet" type="text/css" href="./index_files/5379.9e2ee6f9.css"><link rel="stylesheet" type="text/css" href="./index_files/1811.9e2ee6f9.css"><link rel="stylesheet" type="text/css" href="./index_files/7569.3a19a990.css"><link rel="stylesheet" type="text/css" href="./index_files/9058.b376e57f.css"></head><body><noscript><strong>We're sorry but frontend doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div data-app="true" class="v-application notranslate v-application--is-ltr theme--light" id="inspire"><div class="v-overlay v-overlay--active theme--dark" style="z-index: 203;"><div class="v-overlay__scrim" style="opacity: 0.46; background-color: rgb(33, 33, 33); border-color: rgb(33, 33, 33);"></div><div class="v-overlay__content"></div></div><div class="v-application--wrap"><div data-v-796f0915="" id="dasbor"><!----><nav data-v-455765b4="" data-v-796f0915="" class="v-navigation-drawer v-navigation-drawer--close v-navigation-drawer--fixed v-navigation-drawer--floating v-navigation-drawer--is-mobile theme--light" style="height: 100vh; top: 0px; transform: translateX(-100%); width: 300px;" data-booted="true"><div class="v-navigation-drawer__content"><div data-v-455765b4="" class="v-list py-0 v-sheet theme--light"><div data-v-455765b4="" tabindex="0" class="darken-2 deep-purple v-list-item v-list-item--link theme--dark" style="height: 64px;"><div data-v-455765b4="" align="center" class="v-list-item__content"><span data-v-455765b4="">SIMPKB PPG PRAJAB</span></div></div></div><div data-v-455765b4="" class="v-list pa-0 mb-4 v-sheet theme--light rounded-0"><div data-v-455765b4="" role="listbox" class="v-item-group theme--light v-list-item-group"><a data-v-455765b4="" href="https://ppg-prajab.simpkb.id/home" aria-current="page" class="v-item--active v-list-item--active v-list-item v-list-item--link theme--light" tabindex="0"><div data-v-455765b4="" class="v-list-item__icon"><i data-v-455765b4="" aria-hidden="true" class="v-icon notranslate mdi mdi-home theme--light"></i></div><div data-v-455765b4="" class="v-list-item__content"><div data-v-455765b4="" class="v-list-item__title">Beranda</div></div></a><div data-v-455765b4=""><!----><!----><!----><!----><!----><!----><!----></div><div data-v-455765b4=""><!----><!----></div><div data-v-455765b4=""><div data-v-455765b4="" class="v-subheader theme--light">Modul Tahap 2</div><hr data-v-455765b4="" role="separator" aria-orientation="horizontal" class="v-divider theme--light"><a data-v-455765b4="" href="https://ppg-prajab.simpkb.id/ujian" class="v-list-item v-list-item--link theme--light" tabindex="0"><div data-v-455765b4="" class="v-list-item__icon"><i data-v-455765b4="" aria-hidden="true" class="v-icon notranslate mdi mdi-badge-account-horizontal theme--light"></i></div><div data-v-455765b4="" class="v-list-item__content"><div data-v-455765b4="">Unduh Kartu Tes Substantif</div></div></a></div><div data-v-455765b4=""><div data-v-455765b4="" class="v-subheader theme--light">Modul Tahap 1</div><hr data-v-455765b4="" role="separator" aria-orientation="horizontal" class="v-divider theme--light"><a data-v-455765b4="" href="https://ppg-prajab.simpkb.id/cv" class="v-list-item v-list-item--link theme--light" tabindex="0"><div data-v-455765b4="" class="v-list-item__icon"><i data-v-455765b4="" aria-hidden="true" class="v-icon notranslate mdi mdi-briefcase-account-outline theme--light"></i></div><div data-v-455765b4="" class="v-list-item__content"><div data-v-455765b4="">Biodata Diri</div></div></a><a data-v-455765b4="" href="https://ppg-prajab.simpkb.id/esai" class="v-list-item v-list-item--link theme--light" tabindex="0"><div data-v-455765b4="" class="v-list-item__icon"><i data-v-455765b4="" aria-hidden="true" class="v-icon notranslate mdi mdi-square-edit-outline theme--light"></i></div><div data-v-455765b4="" class="v-list-item__content"><div data-v-455765b4="">Esai</div></div></a><a data-v-455765b4="" href="https://ppg-prajab.simpkb.id/bayar" class="v-list-item v-list-item--link theme--light" tabindex="0"><div data-v-455765b4="" class="v-list-item__icon"><i data-v-455765b4="" aria-hidden="true" class="v-icon notranslate mdi mdi-cash theme--light"></i></div><div data-v-455765b4="" class="v-list-item__content"><div data-v-455765b4="">Pembayaran</div></div></a><!----></div><div data-v-455765b4=""><!----><!----></div><div data-v-455765b4=""><!----><a data-v-455765b4="" tabindex="0" href="https://app.simpkb.id/" target="_self" class="v-list-item v-list-item--link theme--light"><div data-v-455765b4="" class="v-list-item__icon"><i data-v-455765b4="" aria-hidden="true" class="v-icon notranslate mdi mdi-webhook theme--light"></i></div><div data-v-455765b4="" class="v-list-item__content"><div data-v-455765b4="">ke Aplikasi SIMPKB</div></div><!----></a></div></div><!----><div data-v-455765b4="" tabindex="0" class="mt-1 v-list-item v-list-item--link theme--light"><div data-v-455765b4="" class="v-image v-responsive theme--light"><div class="v-responsive__sizer" style="padding-bottom: 60.2662%;"></div><div class="v-image__image v-image__image--cover" style="background-image: url(&quot;https://cdn.siap.id/s3/simpkb/asset%20img/banner-info/Leaderboard-iklan-simpkb-mobile-version.png&quot;); background-position: center center;"></div><div class="v-responsive__content" style="width: 526px;"></div></div></div></div><div data-v-0a50d496="" data-v-455765b4="" class="v-dialog__container"><!----></div></div><div class="v-navigation-drawer__border"></div></nav><header data-v-3a168dd4="" data-v-796f0915="" class="v-sheet theme--dark v-toolbar v-toolbar--flat v-app-bar v-app-bar--fixed secondary" style="height: 56px; margin-top: 0px; transform: translateY(0px); left: 0px; right: 0px;" data-booted="true"><div class="v-toolbar__content" style="height: 56px;"><button data-v-3a168dd4="" type="button" class="v-app-bar__nav-icon v-btn v-btn--icon v-btn--round theme--dark v-size--default"><span class="v-btn__content"><i data-v-3a168dd4="" aria-hidden="true" class="v-icon notranslate mdi mdi-menu theme--dark"></i></span></button><div data-v-3a168dd4="" class="v-toolbar__title">Beranda</div><div data-v-3a168dd4="" class="spacer"></div><!----><hr data-v-3a168dd4="" role="separator" aria-orientation="vertical" class="v-divider v-divider--inset v-divider--vertical theme--dark"><span data-v-3a168dd4="" class="v-tooltip v-tooltip--bottom"><!----></span><div data-v-3a168dd4="" aria-haspopup="true" aria-expanded="false"><button data-v-3a168dd4="" type="button" class="primary--text mx-2 v-btn v-btn--is-elevated v-btn--has-bg v-btn--rounded theme--light elevation-1 v-size--small white" role="button" aria-haspopup="true" aria-expanded="false"><span class="v-btn__content"><i data-v-3a168dd4="" aria-hidden="true" class="v-icon notranslate mdi mdi-apps theme--light"></i><span data-v-3a168dd4="" class="d-none d-sm-block">Program/Layanan</span></span></button><div data-v-3a168dd4="" class="v-menu"><!----></div></div><div data-v-3a168dd4="" role="list" class="v-list v-sheet theme--dark transparent"><div data-v-3a168dd4="" tabindex="0" role="listitem" class="pa-0 ma-0 v-list-item v-list-item--link theme--dark"><div data-v-3a168dd4="" class="v-avatar v-list-item__avatar ma-0 mr-1 grey lighten-4" style="height: 32px; min-width: 32px; width: 32px;"><div data-v-3a168dd4="" class="v-image v-responsive grey lighten-2 theme--dark"><div class="v-responsive__sizer" style="padding-bottom: 150%;"></div><div class="v-image__image v-image__image--cover" style="background-image: url(&quot;https://files1.simpkb.id/foto-ptk/7000140870-20231109000350-125.jpeg&quot;); background-position: center center;"></div><div class="v-responsive__content"></div></div></div><div data-v-3a168dd4="" class="v-list-item__title d-none d-sm-block"> MOCHAMAD SALIM UBAIDILLAH </div></div></div><div data-v-3a168dd4="" class="v-dialog__container"><!----></div></div></header><aside data-v-796f0915="" class="v-navigation-drawer v-navigation-drawer--close v-navigation-drawer--fixed v-navigation-drawer--is-mobile v-navigation-drawer--right v-navigation-drawer--temporary theme--light" style="height: 100%; top: 0px; transform: translateX(100%); width: 250px;" data-booted="true"><div class="v-navigation-drawer__content"><div class="v-card v-card--flat v-sheet theme--light"><div class="v-image v-responsive white--text theme--light" app=""><div class="v-responsive__sizer" style="padding-bottom: 56.25%;"></div><div class="v-image__image v-image__image--cover" style="background-image: url(&quot;https://penggerak-cdn.siap.id/s3/sekolahpenggerak/img/bg-parallax.png&quot;); background-position: center center;"></div><div class="v-responsive__content"><div class="layout lightbox white--text pa-2 justify-center align-center column fill-height"><div class="spacer"></div><div class="flex"><div class="body-2 text-xs-center"><div class="v-avatar mb-1 white" style="height: 80px; min-width: 80px; width: 80px;"><div class="v-image v-responsive grey lighten-2 theme--light"><div class="v-responsive__sizer" style="padding-bottom: 150%;"></div><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-position: center center;"></div><div class="v-responsive__content"></div></div></div></div></div></div></div></div><div class="v-card__title py-2" style="font-size: 1.1rem; font-weight: 400; line-height: 1.4rem;"><div><h4 class="mb-0"> MOCHAMAD SALIM UBAIDILLAH </h4><span class="grey--text body-2 font-italic"> madsalimub@gmail.com </span><div><span class="mx-md-1 v-chip theme--light v-size--x-small primary"><span class="v-chip__content"> Peserta </span></span><!----></div></div></div><hr role="separator" aria-orientation="horizontal" class="v-divider theme--light"><!----><hr role="separator" aria-orientation="horizontal" class="v-divider theme--light"><div role="list" class="v-list v-sheet theme--light v-list--dense v-list--flat"><div class="v-subheader purple--text theme--light">Akun</div><div role="listbox" class="v-item-group theme--light v-list-item-group primary--text"><!----><!----><div tabindex="0" role="option" aria-selected="false" class="v-list-item v-list-item--link theme--light"><div class="v-list-item__icon"><i aria-hidden="true" class="v-icon notranslate mdi mdi-lock theme--light"></i></div><div class="v-list-item__content"><div class="v-list-item__title">Ubah Kata Sandi</div></div></div><div tabindex="0" role="option" aria-selected="false" class="v-list-item v-list-item--link theme--light"><div class="v-list-item__icon"><i aria-hidden="true" class="v-icon notranslate mdi mdi-account-convert theme--light"></i></div><div class="v-list-item__content"><div class="v-list-item__title">Reset Pendaftaran</div></div></div><div tabindex="0" role="option" aria-selected="false" class="v-list-item v-list-item--link theme--light"><div class="v-list-item__icon"><i aria-hidden="true" class="v-icon notranslate mdi mdi-logout-variant theme--light"></i></div><div class="v-list-item__content"><div class="v-list-item__title">Keluar</div></div></div></div></div><div class="v-dialog__container"><!----></div><div class="v-dialog__container"><!----></div><div class="v-dialog__container"><!----></div><div class="v-dialog__container"><!----></div></div></div><div class="v-navigation-drawer__border"></div></aside><main data-v-796f0915="" class="v-main" style="padding: 56px 0px 0px;" data-booted="true"><div class="v-main__wrap"><div data-v-796f0915="" class="container ppg-wrapper container--fluid"><div data-v-3488c54c="" data-v-796f0915=""><div data-v-e2d62336="" data-v-3488c54c=""><div data-v-13f27168="" data-v-e2d62336=""><!----><!----><!----><div data-v-13f27168="" class="pa-2"><div data-v-13f27168="" class="mb-5 v-card v-card--flat v-sheet theme--light rounded-0"><div data-v-13f27168="" class="v-card__text pa-0"><div data-v-13f27168="" class="row bg-kiri no-gutters"><div data-v-13f27168="" class="my-5 px-16 px-lg-5 px-md-5 col-md-2 col-12"><div data-v-6cce35be="" data-v-13f27168="" class="box-card mx-auto"><button data-v-6cce35be="" type="button" class="prof-pic secondary--text v-btn v-btn--icon v-btn--right v-btn--round theme--light v-size--default" id="edit-profpic"><span class="v-btn__content"><i data-v-6cce35be="" aria-hidden="true" class="v-icon notranslate mdi mdi-camera theme--light"></i></span></button><div data-v-6cce35be="" class="v-image v-responsive theme--light"><div class="v-responsive__sizer" style="padding-bottom: 150%;"></div><div class="v-image__image v-image__image--cover" style="background-image: url(&quot;https://files1.simpkb.id/foto-ptk/7000140870-20231109000350-125.jpeg&quot;); background-position: center center;"></div><div class="v-responsive__content"></div></div><div data-v-6cce35be="" class="avatar-cropper"><!----> <input accept="image/png, image/gif, image/jpeg, image/bmp, image/x-icon" type="file" class="avatar-cropper-img-input"></div></div></div><div data-v-13f27168="" class="pa-5 col-md-10 col-12" style="background-color: white;"><div data-v-13f27168="" class="row no-gutters row--dense"><div data-v-13f27168="" class="col-md-8 col-12"><h1 data-v-13f27168="" class="headline secondary--text"> Selamat Datang, <strong data-v-13f27168="">MOCHAMAD SALIM UBAIDILLAH</strong></h1><h2 data-v-13f27168="" class="secondary--text">Program Pendidikan Profesi Guru (PPG) - PRAJAB 2023</h2></div><div data-v-13f27168="" class="text-right right-aligned col-md-4 order-sm-first order-md-last order-lg-last col-12 order-first"><span data-v-13f27168="" class="mr-1 mb-1 caption v-chip theme--dark v-size--small success"><span class="v-chip__content"><i data-v-13f27168="" aria-hidden="true" class="v-icon notranslate mr-2 mdi mdi-school theme--dark" style="font-size: 16px;"></i> Angkatan 3 </span></span><span data-v-13f27168="" class="mr-1 mb-1 caption v-chip theme--dark v-size--small red"><span class="v-chip__content"><i data-v-13f27168="" aria-hidden="true" class="v-icon notranslate mr-2 mdi mdi-account-check theme--dark" style="font-size: 16px;"></i> Peserta </span></span></div></div><p data-v-13f27168="" class="mt-2"> Program yang berupaya untuk mewujudkan visi Pendidikan Indonesia dalam mewujudkan Indonesia maju yang berdaulat, mandiri, dan berkepribadian melalui terciptanya Pelajar Pancasila. </p></div></div></div></div><h2 data-v-13f27168="" class="headline py-2"> Langkah-Langkah Seleksi Tahap II Calon Peserta Program PPG - PRAJAB </h2></div></div><!----><!----><div data-v-e2d62336="" class="pa-3 col-md-12 col-lg-12 col-12"><div data-v-e2d62336="" class="headline">Daftar Modul Tahap 2</div><hr data-v-e2d62336="" role="separator" aria-orientation="horizontal" class="py-3 v-divider theme--light"><div data-v-e2d62336="" class="row"><div data-v-e2d62336="" class="col-md-4 col-lg-4 col-12"><a data-v-86801d3a="" data-v-e2d62336="" href="https://ppg-prajab.simpkb.id/ujian" class="v-card v-card--link v-sheet v-sheet--outlined theme--light rounded-0" tabindex="0" style="height: 100%;"><div data-v-86801d3a="" tabindex="-1" class="v-list-item theme--light error lighten-1"><div data-v-86801d3a="" class="v-list-item__content" style="margin-left: -17px; background: transparent;"></div><div data-v-86801d3a="" class="v-list-item__icon"><i data-v-86801d3a="" aria-hidden="true" class="v-icon notranslate mdi mdi-badge-account-horizontal theme--light white--text" style="font-size: 80px;"></i></div></div><div data-v-86801d3a="" tabindex="-1" class="v-list-item theme--dark error lighten-1"><div data-v-86801d3a="" class="v-list-item__content"><div data-v-86801d3a="" class="title h mb-1">Unduh Kartu Tes Substantif</div><div data-v-86801d3a="" class="v-list-item__subtitle subtitle-1">&nbsp;</div></div></div><div data-v-86801d3a="" class="v-card__text text--primary pb-0" style="min-height: 100px;"><span data-v-86801d3a="">Unduh Kartu Tes Substantif untuk melaksanakan tahapan seleksi akademik Anda melalui menu ini</span></div><div data-v-86801d3a="" class="v-card__actions pt-0 mb-0"></div></a></div></div></div><div data-v-e2d62336="" class="pa-3 col-md-12 col-lg-12 col-12"><div data-v-e2d62336="" class="headline">Daftar Modul Tahap 1</div><hr data-v-e2d62336="" role="separator" aria-orientation="horizontal" class="py-3 v-divider theme--light"><div data-v-e2d62336="" class="row"><div data-v-e2d62336="" class="col-md-4 col-lg-4 col-12"><a data-v-86801d3a="" data-v-e2d62336="" href="https://ppg-prajab.simpkb.id/cv" class="v-card v-card--link v-sheet v-sheet--outlined theme--light rounded-0" tabindex="0" style="height: 100%;"><div data-v-86801d3a="" tabindex="-1" class="v-list-item theme--light orange"><div data-v-86801d3a="" class="v-list-item__content" style="margin-left: -17px; background: transparent;"></div><div data-v-86801d3a="" class="v-list-item__icon"><i data-v-86801d3a="" aria-hidden="true" class="v-icon notranslate mdi mdi-briefcase-account-outline theme--light white--text" style="font-size: 80px;"></i></div></div><div data-v-86801d3a="" tabindex="-1" class="v-list-item theme--dark orange"><div data-v-86801d3a="" class="v-list-item__content"><div data-v-86801d3a="" class="title h mb-1">Biodata Diri</div><div data-v-86801d3a="" class="v-list-item__subtitle subtitle-1">&nbsp;</div></div></div><div data-v-86801d3a="" class="v-card__text text--primary pb-0" style="min-height: 100px;"><span data-v-86801d3a="">Pada langkah ini Anda diharuskan melengkapi semua informasi Biodata Diri Anda</span></div><div data-v-86801d3a="" class="v-card__actions pt-0 mb-0"></div></a></div><div data-v-e2d62336="" class="col-md-4 col-lg-4 col-12"><a data-v-86801d3a="" data-v-e2d62336="" href="https://ppg-prajab.simpkb.id/esai" class="v-card v-card--link v-sheet v-sheet--outlined theme--light rounded-0" tabindex="0" style="height: 100%;"><div data-v-86801d3a="" tabindex="-1" class="v-list-item theme--light blue darken-2"><div data-v-86801d3a="" class="v-list-item__content" style="margin-left: -17px; background: transparent;"></div><div data-v-86801d3a="" class="v-list-item__icon"><i data-v-86801d3a="" aria-hidden="true" class="v-icon notranslate mdi mdi-square-edit-outline theme--light white--text" style="font-size: 80px;"></i></div></div><div data-v-86801d3a="" tabindex="-1" class="v-list-item theme--dark blue darken-2"><div data-v-86801d3a="" class="v-list-item__content"><div data-v-86801d3a="" class="title h mb-1">Esai</div><div data-v-86801d3a="" class="v-list-item__subtitle subtitle-1">&nbsp;</div></div></div><div data-v-86801d3a="" class="v-card__text text--primary pb-0" style="min-height: 100px;"><span data-v-86801d3a="">Pada langkah ini Anda diharuskan menyelesaikan semua pertanyaan Esai yang telah disediakan</span></div><div data-v-86801d3a="" class="v-card__actions pt-0 mb-0"></div></a></div><div data-v-e2d62336="" class="col-md-4 col-lg-4 col-12"><a data-v-86801d3a="" data-v-e2d62336="" href="https://ppg-prajab.simpkb.id/bayar" class="v-card v-card--link v-sheet v-sheet--outlined theme--light rounded-0" tabindex="0" style="height: 100%;"><div data-v-86801d3a="" tabindex="-1" class="v-list-item theme--light success"><div data-v-86801d3a="" class="v-list-item__content" style="margin-left: -17px; background: transparent;"></div><div data-v-86801d3a="" class="v-list-item__icon"><i data-v-86801d3a="" aria-hidden="true" class="v-icon notranslate mdi mdi-cash theme--light white--text" style="font-size: 80px;"></i></div></div><div data-v-86801d3a="" tabindex="-1" class="v-list-item theme--dark success"><div data-v-86801d3a="" class="v-list-item__content"><div data-v-86801d3a="" class="title h mb-1">Pembayaran</div><div data-v-86801d3a="" class="v-list-item__subtitle subtitle-1">&nbsp;</div></div></div><div data-v-86801d3a="" class="v-card__text text--primary pb-0" style="min-height: 100px;"><span data-v-86801d3a="">Aksi Pembayaran untuk melanjutkan ke tahap seleksi berikutnya</span></div><div data-v-86801d3a="" class="v-card__actions pt-0 mb-0"></div></a></div><!----></div></div><!----><div data-v-e2d62336="" class="v-dialog__container"></div><div data-v-e2d62336="" class="v-dialog__container"><!----></div><div data-v-e2d62336="" class="v-dialog__container"><!----></div><div data-v-e2d62336="" class="v-dialog__container"><!----></div><div data-v-e2d62336="" class="v-dialog__container"><!----></div></div></div></div><!----></div></main></div><div data-v-6c787a41="" class="v-snack v-snack--has-background v-snack--right v-snack--top" style="opacity: 0.8;"><div class="v-snack__wrapper v-sheet theme--dark info" style="display: none;"><div role="status" aria-live="polite" class="v-snack__content"><div data-v-6c787a41="" class="v-card v-card--flat v-sheet theme--dark transparent"><div data-v-6c787a41="" class="v-card__text pa-0"><div data-v-6c787a41="" role="list" class="v-list pa-0 v-sheet theme--dark transparent"><div data-v-6c787a41="" tabindex="-1" role="listitem" class="v-list-item theme--dark"><!----><div data-v-6c787a41="" class="v-list-item__content"><span data-v-6c787a41="" class="white--text body-1"></span></div></div></div></div><hr data-v-6c787a41="" role="separator" aria-orientation="horizontal" class="v-divider theme--light"><div data-v-6c787a41="" class="v-card__actions"><div data-v-6c787a41="" class="spacer"></div><button data-v-6c787a41="" type="button" class="text-right mt-1 v-btn v-btn--right v-btn--text theme--dark v-size--default"><span class="v-btn__content"> Tutup </span></button></div></div></div><div class="v-snack__action "></div></div></div><div class="row justify-center"><div class="v-dialog__container"><!----></div></div><div class="v-dialog__container"><!----></div><div data-v-62456b60="" class="v-dialog__container"></div></div><div role="dialog" aria-modal="true" data-v-62456b60="" class="v-dialog__content" style="z-index: 202;"><div class="v-dialog v-dialog--persistent" style="transform-origin: center center; width: 300px; display: none;"><div data-v-62456b60="" class="v-card v-sheet theme--dark primary"><div data-v-62456b60="" class="v-card__text pt-3"><span data-v-62456b60="" class="pt-2">Sedang dalam proses, silakan tunggu...</span><div data-v-62456b60="" role="progressbar" aria-valuemin="0" aria-valuemax="100" class="v-progress-linear mb-0 theme--dark" style="height: 4px;"><div class="v-progress-linear__background white" style="opacity: 0.3; left: 0%; width: 100%;"></div><div class="v-progress-linear__buffer"></div><div class="v-progress-linear__indeterminate v-progress-linear__indeterminate--active"><div class="v-progress-linear__indeterminate long white"></div><div class="v-progress-linear__indeterminate short white"></div></div></div></div></div></div></div><div role="dialog" aria-modal="true" class="v-dialog__content v-dialog__content--active" style="z-index: 204;"><div tabindex="0" class="v-dialog v-dialog--active v-dialog--persistent v-dialog--scrollable" style="transform-origin: center center; max-width: 650px;"><div class="v-card v-sheet theme--light"><div class="v-card__title pa-0"><header class="v-sheet theme--dark v-toolbar v-toolbar--flat blue" style="height: 56px;"><div class="v-toolbar__content" style="height: 56px;"><div class="v-toolbar__title">Pengumuman</div><div class="spacer"></div><button type="button" class="v-btn v-btn--icon v-btn--round theme--dark v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-close theme--dark"></i></span></button></div></header></div><div class="v-card__text"><div class="row my-1"><div class="col col-3"><div class="v-image v-responsive theme--light"><div class="v-responsive__sizer" style="padding-bottom: 147.464%;"></div><div class="v-image__image v-image__image--cover" style="background-image: url(&quot;https://penggerak-cdn.siap.id/s3/sekolahpenggerak/img/img-alert.png&quot;); background-position: center center;"></div><div class="v-responsive__content" style="width: 276px;"></div></div></div><div class="col col-9"><div><h3 class="mb-2">Selamat Sdr MOCHAMAD SALIM UBAIDILLAH</h3><p class="black--text">Sehubungan dengan keikutsertaan Saudara pada Seleksi Tahap 3 yaitu Tes Wawancara, 
+           <b>SELAMAT</b> Saudara dinyatakan <b class="error--text">LOLOS</b> Tes Wawancara PPG Prajabatan Tahun 2023.</p><p class="black--text">Segera lakukan konfirmasi kesediaan dalam PPG Prajab di LPTK Universitas Muhammadiyah Gresik sesuai Jadwal yang telah ditentukan.</p><p class="black--text"></p><p class="black--text"></p><p class="black--text">Panitia Seleksi PPG Prajabatan Gelombang 3 Tahun 2023</p></div><!----></div></div></div><hr role="separator" aria-orientation="horizontal" class="v-divider theme--light"><div class="v-card__actions"><div class="spacer"></div><!----><!----><button type="button" class="ma-2 v-btn v-btn--is-elevated v-btn--has-bg theme--dark v-size--default blue"><span class="v-btn__content"> OK </span></button></div></div></div></div></div><script src="./index_files/api.js.download" async="" defer="defer"></script></body></html>
